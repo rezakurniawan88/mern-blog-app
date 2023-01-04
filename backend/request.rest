@@ -1,0 +1,28 @@
+GET http://localhost:5000/blog?title=coba&page=0&limit=4
+
+###
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoicmV6emEiLCJlbWFpbCI6ImFkbWluQHJlenphLmNvbSIsImlhdCI6MTY3MjcyMzA1MCwiZXhwIjoxNjcyNzIzMDcwfQ.tC5NZ9eAPEJmStlM-9yBFHdOreomLOBcClUwpI398R8
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username": "rezza",
+    "email": "admin@rezza.com",
+    "password": "12345",
+    "confirmPassword": "12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@rezza.com",
+    "password": "12345"
+}
+
+###
+DELETE http://localhost:5000/logout
